@@ -11,7 +11,7 @@ CORS(app)
 #loading insurance data 
 def load_insurance_data() : 
     try : 
-        json_path = os.dotenv("DATA_PATH")
+        json_path = os.getenv("DATA_PATH")
         with open(json_path, 'r', encoding = 'utf-8') as file : 
             data = json.load(file)
             return data
